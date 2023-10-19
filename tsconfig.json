@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "strict": true,
+    "declaration": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "jsx": "react",
+    "baseUrl": "./",
+    "paths": {
+      "@@/*": [".dumi/tmp/*"],
+      "formula-ui": ["src"],
+      "formula-ui/*": ["src/*", "*"]
+    }
+  },
+  "typings": "./typings.d.ts",
+  "include": [".dumirc.ts", "src/**/*", "./typings.d.ts"]
+}
