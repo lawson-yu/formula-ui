@@ -35,8 +35,6 @@ interface Options {
   errorCallback?: (error: any) => void;
 }
 
-export { Options as UsePaginationOptions };
-
 export function usePagination<T = any>(options: Options) {
   const {
     defaultPageSize = 10,
@@ -93,4 +91,6 @@ export function usePagination<T = any>(options: Options) {
 }
 
 const Index: FC<Options> = () => <></>;
+
 export default Index;
+export { Options as UsePaginationOptions };

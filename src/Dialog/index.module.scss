@@ -1,0 +1,113 @@
+.modalWrap {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(20px);
+  :global {
+    .ant-modal {
+      .ant-modal-content {
+        padding: 50px 0 100px;
+        box-sizing: border-box;
+        background-color: rgba(255, 255, 255, 0.5);
+        border-radius: 30px;
+        backdrop-filter: blur(15px);
+      }
+      .ant-modal-confirm-content {
+        width: 100%;
+      }
+    }
+  }
+}
+.title {
+  font-size: 28px;
+  font-weight: 500;
+  color: #05245a;
+  margin-bottom: 50px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 48px;
+  box-shadow: -8px 12px 20px 0px rgba(66, 160, 207, 0.5);
+  border-radius: 40px;
+  font-size: 20px;
+  font-weight: 500;
+  cursor: pointer;
+}
+.dialog {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.contWrap {
+  box-sizing: border-box;
+  width: 100%;
+  font-size: 24px;
+  font-weight: 500;
+  color: #05245a;
+  min-height: 128px;
+  padding: 0 130px;
+}
+
+.footer {
+  margin-top: 20px;
+}
+
+.ok {
+  background: #3d7eff;
+  color: #fff;
+  @extend .btn;
+}
+.cancel {
+  background: #ffffff;
+  color: #7280b7;
+  @extend .btn;
+}
+
+.ok + .cancel {
+  margin-left: 60px;
+}
+
+// :global(.overseas) {
+//   &:global(.light) {
+//     .modalWrap {
+//       :global {
+//         .ant-form .ant-form-item-label > label {
+//           font-size: 28px;
+//           font-weight: 500;
+//           color: #0b3765;
+//         }
+//         .ant-modal-content {
+//           background: #fff;
+//           border-radius: 30px;
+//         }
+//       }
+//     }
+
+//     .title {
+//       font-size: 28px;
+//       font-weight: 500;
+//       color: #0b3765;
+//     }
+//     .content,
+//     .contWrap {
+//       color: #0b3765;
+//     }
+
+//     .btn {
+//       box-shadow: -8px 12px 20px 0px rgba(163, 189, 202, 0.5);
+//       border-radius: 12px;
+//     }
+//     .ok {
+//       background: #00a3ff;
+//       color: #ffffff;
+//     }
+//     .cancel {
+//       color: #7280b7;
+//       box-shadow: -8px 12px 20px 0px rgba(163, 189, 202, 0.5);
+//     }
+//   }
+// }

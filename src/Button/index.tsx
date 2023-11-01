@@ -15,6 +15,11 @@ interface Props {
    */
   className?: string;
   /**
+   * @description 按钮Style
+   * @type React.CSSProperties
+   */
+  style?: React.CSSProperties;
+  /**
    * @description icon
    * @type ReactNode | undefined
    */
@@ -31,10 +36,8 @@ interface Props {
   onClick?: () => void;
 }
 
-export { Props as ButtonProps}
-
 const Button: FC<Props> = (props) => {
-  const { className, children, icon, disabled, onClick } = props;
+  const { className, style, children, icon, disabled, onClick } = props;
 
   const handleBtnClick = () => {
     if (disabled) return;
@@ -42,7 +45,11 @@ const Button: FC<Props> = (props) => {
   };
 
   return (
-    <div className={cn(styles.btn, className)} onClick={handleBtnClick}>
+    <div
+      className={cn(styles.btn, className)}
+      style={style}
+      onClick={handleBtnClick}
+    >
       {icon}
       {children ?? '按钮'}
     </div>
@@ -50,3 +57,4 @@ const Button: FC<Props> = (props) => {
 };
 
 export default Button;
+export type { Props as ButtonProps };

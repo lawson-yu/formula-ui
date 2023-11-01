@@ -1,30 +1,28 @@
 ---
 description: formula components
 hero:
-  title: formula-ui
+  title: LSBIZ-UI
   description: 公式计算组件库
   actions:
     - text: 更多组件
       link: /components/button
 ---
 
-# formula-ui
+# lsbiz-ui
 
 Common Components for Formula Calculations
 
 ## install
 
 ```bash
-pnpm i formula-ui
+pnpm i lsbiz-ui
 ```
 
 ## Usage
 
 ```ts
 import React from 'react'
-import { Button } from 'formula-ui';
+import { Button } from 'lsbiz-ui';
 
 React.render(<Button />, mountNode);
 ```
-
-## <a href="/components">More...</a>

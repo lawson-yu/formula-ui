@@ -8,8 +8,8 @@
     "baseUrl": "./",
     "paths": {
       "@@/*": [".dumi/tmp/*"],
-      "formula-ui": ["src"],
-      "formula-ui/*": ["src/*", "*"]
+      "lsbiz-ui": ["src"],
+      "lsbiz-ui/*": ["src/*", "*"]
     }
   },
   "typings": "./typings.d.ts",

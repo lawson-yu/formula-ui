@@ -78,14 +78,15 @@ const Pagination: FC<Props> = (props) => {
           showSizeChanger={false}
           jumpPrevIcon={() => <span>...</span>}
           jumpNextIcon={() => <span>...</span>}
+          onChange={onChange}
           {...paginationProps}
         />
         每页显示
         {onChange ? (
           <select
-            className={styles.select}
+            className={cn(styles.select, 'select')}
             value={pageSize}
-            onChange={(e) => onChange?.(current, e.target.value)}
+            onChange={(e) => onChange?.(1, e.target.value)}
           >
             {pageSizeOptions.map((option: number) => (
               <option key={option} value={option}>
@@ -103,3 +104,4 @@ const Pagination: FC<Props> = (props) => {
 };
 
 export default Pagination;
+export type { Props as PaginationProps };

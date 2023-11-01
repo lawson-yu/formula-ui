@@ -1,0 +1,150 @@
+.block {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  height: 100%;
+  overflow: hidden;
+}
+
+.scrollBlock {
+  flex: 1;
+  overflow-y: scroll;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE 10+ */
+  &::-webkit-scrollbar {
+    display: none; /* Chrome Safari */
+    background: green;
+  }
+}
+
+.listGroup {
+  margin-top: 10px;
+  &.open {
+    .listGroupChildren {
+      height: unset;
+    }
+  }
+
+  & + .listGroup {
+    margin-top: 20px;
+  }
+}
+
+.listGroupItem {
+  display: flex;
+  align-items: center;
+  padding: 0 10px 0 20px;
+  height: 48px;
+  background: #daf4ff;
+  border-radius: 8px;
+  border: 1px solid #00a3ff;
+  backdrop-filter: blur(10px);
+  font-size: 16px;
+  font-weight: 500;
+  color: #00a3ff;
+  cursor: pointer;
+}
+
+.listGroupChildren {
+  height: 0;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  font-weight: 400;
+  font-size: 12px;
+  color: #0b3765;
+}
+
+.item.supItem {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.searchCtrl {
+  margin-bottom: 10px;
+}
+
+.item {
+  padding: 10px 10px 10px 20px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-size: 12px;
+  color: #0b3765;
+  border: 1px solid transparent;
+}
+
+.supTitle {
+  font-size: 20px;
+  font-weight: 500;
+  color: #7280b7;
+  line-height: 28px;
+  margin-top: 10px;
+}
+
+.listGroup {
+  &.open {
+    .listGroupItem {
+      &::before {
+        transform: rotate(0);
+      }
+    }
+  }
+}
+
+.listGroupItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4px 20px;
+  background: #daf4ff;
+  border-radius: 8px;
+  border: 1px solid #00a3ff;
+  backdrop-filter: blur(10px);
+  font-size: 16px;
+  font-weight: 500;
+  color: #00a3ff;
+  cursor: pointer;
+}
+
+.fold {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  width: 40px;
+  position: relative;
+  &::before {
+    position: absolute;
+    content: ' ';
+    left: 50%;
+    transform: translateX(-50%);
+    width: 18px;
+    height: 18px;
+    background-size: cover;
+    transition: all 0.3s ease;
+    background-image: url('./images/arrow_top_light@2x.png');
+    transform: rotate(90deg);
+  }
+
+  &.foldRotate {
+    &::before {
+      transform: rotate(180deg);
+    }
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+.show {
+  display: block;
+  margin-left: 40px;
+}
+
+.groupLabel{
+  flex: 1;
+}

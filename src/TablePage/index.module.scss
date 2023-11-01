@@ -4,7 +4,7 @@
   margin: 16px 0;
 }
 
-.btnWrap{
+.btnWrap {
   width: 100%;
   display: flex;
   justify-content: flex-end;
@@ -131,77 +131,5 @@
     color: #00a3ff;
     font-size: 12px;
     font-weight: 500;
-  }
-}
-
-:global(.dark) {
-  .card {
-    border: 1px solid;
-    border-radius: 0;
-    background: #1a3f54;
-    border-image: linear-gradient(180deg, rgba(222, 255, 253, 1), rgba(186, 255, 250, 0.1)) 1 1;
-
-    :global {
-      .rc-table-thead {
-        background: #39738d;
-        color: #43faf8;
-
-        .rc-table-cell {
-          &:before {
-            background-color: #59c3ce;
-          }
-        }
-      }
-
-      .rc-table-tbody {
-        tr:nth-child(odd) {
-          background: linear-gradient(
-            270deg,
-            rgba(103, 190, 195, 0) 0%,
-            rgba(54, 137, 145, 0.4) 100%
-          );
-        }
-
-        .rc-table-cell {
-          border-bottom: none;
-          color: #59c3ce;
-        }
-      }
-    }
-  }
-
-  .content {
-    border-image: linear-gradient(135deg, rgba(178, 217, 220, 1), rgba(55, 107, 112, 1)) 1 1;
-  }
-
-  .btn {
-    width: 178px;
-    height: 46px;
-    background-size: 100%;
-    background-color: transparent;
-    background-image: url(/btn_bg_overseas@2x.png);
-    color: #43faf8;
-    border-radius: 0;
-  }
-
-  .empty {
-    color: #59c3ce;
-
-    img {
-      width: 120px;
-      margin-bottom: 6px;
-    }
-
-    .btn {
-      width: 140px;
-      height: 30px;
-      background-image: none;
-    }
-  }
-
-  .actions {
-    a {
-      color: #43faf8;
-    }
   }
 }

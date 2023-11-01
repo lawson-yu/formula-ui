@@ -1,10 +1,22 @@
 import cn from 'classnames';
-import { Button, ButtonProps, Pagination, UsePaginationOptions, usePagination } from 'formula-ui';
+import { Button, Pagination, usePagination } from 'lsbiz-ui';
+import { ButtonProps } from 'lsbiz-ui/Button';
+import { UsePaginationOptions } from 'lsbiz-ui/hooks/usePagination';
 import Table, { TableProps } from 'rc-table';
 import React, { ReactNode, type FC } from 'react';
 import styles from './index.module.scss';
 
 interface Props {
+  /**
+   * @description 样式
+   * @type React.CSSProperties
+   */
+  style?: React.CSSProperties;
+  /**
+   * @description 类名
+   * @type string
+   */
+  className?: string;
   /**
    * @description 表格类名
    * @type string
@@ -39,25 +51,43 @@ interface Props {
    * @description 请求信息配置-参考：usePagination属性
    * @type UsePaginationOptions
    */
-  requestInfo: UsePaginationOptions
+  requestInfo: UsePaginationOptions;
 }
 
 const TablePage: FC<Props> = (props) => {
-  const { footer, columns, extra, tableClassName, tableProps, btnProps, requestInfo } =
-    props;
+  const {
+    footer,
+    columns,
+    extra,
+    tableClassName,
+    tableProps,
+    btnProps,
+    requestInfo,
+    className,
+    style,
+  } = props;
 
-  const { dataSource, current, pageSize, total, fetch } = usePagination(requestInfo);
+  const {
+    dataSource,
+    current,
+    pageSize,
+    total,
+    fetch: getData,
+  } = usePagination(requestInfo);
 
   const handlePaginationChange = (page: number, pageSize: string | number) => {
-    fetch({
+    getData({
       current: page,
       pageSize: pageSize,
     });
   };
 
   return (
-    <div className={cn('table-page-container', styles.container)}>
-      <div className={styles.card}>
+    <div
+      className={cn('table-page-container', styles.container, className)}
+      style={style}
+    >
+      <div className={cn('table-page-container-card', styles.card)}>
         {extra ? (
           extra
         ) : (
@@ -91,3 +121,4 @@ const TablePage: FC<Props> = (props) => {
 };
 
 export default TablePage;
+export type { Props as TablePageProps };

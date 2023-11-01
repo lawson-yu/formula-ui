@@ -3,7 +3,7 @@ import { defineConfig } from 'dumi';
 export default defineConfig({
   outputPath: 'docs-dist',
   themeConfig: {
-    name: 'formula-ui',
+    name: 'lsbiz-ui',
   },
   apiParser: {},
   resolve: {

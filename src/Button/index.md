@@ -1,19 +1,17 @@
 ---
+nav: Components
 group:
-  title: Components
-  order: 1
+  title: 基础组件
 ---
 
 # Button
 
-基本使用
 ```tsx
-import React from 'react'
-import { Button } from 'formula-ui'
+import { Button } from 'lsbiz-ui';
+import React from 'react';
 
-export default () => <Button icon={'+'}>按钮</Button>
+export default () => <Button icon={'+'}>按钮</Button>;
 ```
-
 
 参数
 <API id="Button"></API>

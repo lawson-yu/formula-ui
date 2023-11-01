@@ -1,0 +1,51 @@
+.container {
+  width: 100%;
+  background: #f5f7fa;
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+
+  :global {
+    .cm-content {
+      color: #7280b7;
+      font-size: 16px;
+      font-weight: 500;
+    }
+
+    .cm-focused {
+      outline: none;
+    }
+  }
+}
+
+.operators {
+  display: flex;
+  gap: 10px;
+  padding: 10px;
+  height: 60px;
+}
+
+.operator {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #00a3ff;
+  border-radius: 8px;
+  color: #fff;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.editor {
+  flex: 1;
+  height: 100%;
+  // background-color: #f63;
+}
+
+.widget {
+  padding: 3px 6px;
+  margin: 0 3px;
+  background-color: #daf4ff;
+  border-radius: 4px;
+}

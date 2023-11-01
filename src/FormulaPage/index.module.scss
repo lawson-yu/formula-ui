@@ -1,0 +1,76 @@
+.page {
+  padding: 20px;
+  display: flex;
+  margin: 40px auto 60px;
+  width: 100%;
+  height: 700px;
+  background: #fff;
+  backdrop-filter: blur(8.253094910591471px);
+  border-radius: 10px;
+
+  :global {
+    .ant-form .ant-form-item-label {
+      height: unset;
+
+      > label {
+        font-size: 17px;
+      }
+    }
+
+    .ant-checkbox-group {
+      margin: 20px 0 0 40px;
+      gap: 60px;
+    }
+
+    .ant-checkbox-wrapper {
+      font-size: 20px;
+      color: #7280b7;
+    }
+  }
+}
+
+.form{
+  flex: 1;
+}
+
+.menu {
+  flex-shrink: 0;
+  width: 280px;
+  margin-right: 40px;
+}
+
+.actions {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 140px;
+}
+
+.btn {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 48px;
+  background: #f5f7fa;
+  border-radius: 12px;
+  font-weight: 500;
+  font-size: 20px;
+  color: #7280b7;
+  border: none;
+}
+
+.btnPrimary {
+  @extend .btn;
+
+  background: #00a3ff;
+  color: #fff;
+}
+
+.btnError {
+  @extend .btn;
+
+  background-color: #f48181;
+  color: #ffffff;
+}
